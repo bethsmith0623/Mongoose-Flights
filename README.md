@@ -1,6 +1,16 @@
 # Flight Project
 
+| Last Updated  | Author |
+
+
 ## Technologies Used
+
+- JavaScript
+- HTML
+- CSS
+- MongoDB
+- Mongoose
+- Express/EJS
 
 
 ## User Stories

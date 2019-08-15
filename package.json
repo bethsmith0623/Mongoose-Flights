@@ -1,0 +1,19 @@
+{
+  "name": "mongoose-flights",
+  "version": "1.0.0",
+  "description": "## Technologies Used",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bethsmith0623/Mongoose-Flights.git"
+  },
+  "author": "Beth Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bethsmith0623/Mongoose-Flights/issues"
+  },
+  "homepage": "https://github.com/bethsmith0623/Mongoose-Flights#readme"
+}
