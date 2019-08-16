@@ -21,5 +21,7 @@ const flightSchema = new Schema({
         date.setFullYear(updatedYear);
         return date;
     }
-  }
-})
+  }, timestamps: true
+});
+
+module.exports = mongoose.model('Flight', flightSchema);
