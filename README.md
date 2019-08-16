@@ -34,6 +34,7 @@ ADD FLIGHT
 
 - Style the index and new views.
 
+
 Part 2
 
 - Create a destinationSchema that will provide the structure for destination subdocuments with the following properties:
@@ -63,4 +64,7 @@ Bonuses
 - Style the views.
 
 - When adding a destination for a flight, exclude the airports in the <select> that have already been used by other destinations and/or the flight's airport.
+
+
+Part 3
 
