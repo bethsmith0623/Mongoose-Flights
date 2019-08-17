@@ -1,15 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Flight Journal</title>
-</head>
+
 <body>
   <h1>Flights Scheduled</h1>
-  <% flights.forEach(function(flight){ %>
-    <p><%= flight.airline %> | <%= flight.flightNo %> | <%= flight.departs %></p>
-  <% }) %>
+  <a href="/flights/new">Add New Flight</a>
+  <a href="/">Go to Home Page</a>
+<table>
+  <thead>
+    <tr>
+      <th>Airline</th>
+      <th>Flight No.</th>
+      <th>Departure Date/Time</th>
+      <th>Destination</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% flights.forEach(function(flight){ %>
+      <tr>
+        <td><%= flight.airline %></td>
+        <td><%= flight.flightNo %></td>
+        <td><%= flight.departs %></td>
+        <td></td>
+      </tr>
+      <% }) %>
+        <a href="/flights/<%= flights._id %>">Details</a>
+    </tbody>
+  </table>
 </body>
 </html>
