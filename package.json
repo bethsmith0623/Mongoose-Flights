@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/bethsmith0623/Mongoose-Flights#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.4",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
-    "mongoose": "^5.6.9"
+    "mongoose": "^5.6.9",
+    "morgan": "^1.9.1"
   }
 }
