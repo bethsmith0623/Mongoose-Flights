@@ -14,7 +14,7 @@ const destinationSchema = new Schema({
         const date = new Date();
         const updatedYear = date.getFullYear() + 1;
         date.setFullYear(updatedYear);
-        return date + 1;
+        return date;
       }
     }, 
   }, { timestamps: true });
