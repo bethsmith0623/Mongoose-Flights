@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const destinationSchema = require('./destination');
 
 const flightSchema = new Schema({
   airline: {
@@ -27,9 +28,8 @@ const flightSchema = new Schema({
     enum: ['SEA', 'DAL', 'LAX', 'AUS'],
     default: 'SEA'
   },
-  // destinations: {
-  //   type: [destinationSchema]
-  // },
+  destinations: [{type: Schema.Types.ObjectId, ref: 'Destination'}]
+  ,
 }, { timestamps: true });
 
 module.exports = mongoose.model('Flight', flightSchema);
