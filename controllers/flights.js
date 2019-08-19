@@ -1,5 +1,6 @@
 const Flight = require('../models/flight');
 const Destination = require('../models/destination');
+const Ticket = require('../models/ticket');
 
 module.exports = {
   index,
@@ -10,21 +11,14 @@ module.exports = {
 };
 
 function addDestination (req,res) {
-  //   require the destination array up top
-  //1) Query the database for a single flight by id
-  //2) Create a destination
-  //3) Push the destination to the destinations array property on the flight
-  //4) Save the flight record/doc
-  //5) call res-redirect /flights/:id
   Flight.findById(req.params.id, function(err, flight) {
     Destination.create(req.body, function(err, destination){
-      flight.destinations.push(destination._id);
-      flight.save(function(err, flight) {
-        console.log(flight);
-        res.redirect(`/flights/${flight._id}`)
-      })
-    })
-  })
+      flight.destination.push(req.body);
+      destination.save(function(err, destination) {
+        res.redirect(`/flights/${flight._id}`);
+      });
+    });
+  });
 };
 
 function index(req, res){
@@ -54,7 +48,10 @@ function show(req,res){
   //2) We need to call res.render and render a show.ejs template
   Flight.findById(req.params.id)
   .populate('Destination').exec(function(err, flight){
-    res.render('flights/show', {title: 'Flight Detail', flight});
+    console.log('flight ID is', flight._id)
+    Ticket.find({flights: flight._id}, function(err, tickets){
+      console.log(tickets);
+      res.render('flights/show', {title: 'Flight Detail', flight, tickets});
+    });
   });
-  
 };

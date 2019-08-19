@@ -10,7 +10,7 @@ const ticketSchema = new Schema ({
     type: Number,
     min: 0
   },
-  flight: [{type: Schema.Types.ObjectId, ref: 'Flight'}]
+  flights: [{type: Schema.Types.ObjectId, ref: 'Flight'}]
 }, { timestamps: true });
 
 module.exports = mongoose.model('Ticket', ticketSchema);

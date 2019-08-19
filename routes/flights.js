@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const flightCtlr = require('../controllers/flights');
+const destinationCtlr = require('../controllers/destinations');
+
 
 // GET /flights/ => "see all the flights"
 // Routers mat to controller action

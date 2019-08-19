@@ -8,11 +8,18 @@
 </head>
 <body>
   <% include ../partials/header %>
+  <a href="/flights/<%= flight.id%>/tickets/new">Add a Ticket to this Flight</a>
   
     <div>Airline: <%= flight.airline %></div>
     <div>Flight No: <%= flight.flightNo %></div>
     <div>Flight Date/Time: <%= flight.departs %></div>
     <div>Departing Airport: <%= flight.airport %></div>
+
+    <h5>Tickets Associated with this Flight</h5>
+    <% tickets.forEach(function(t){ %>
+      <p><%= t.seat %>        $<%= t.price %></p>
+    <% }) %>
+
     <% if(flight.destinations.length > 0) { %>
       <% flight.destinations.forEach(function(d) { %>
         <p><%= d.airport %></p>

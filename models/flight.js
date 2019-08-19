@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const destinationSchema = require('./destination');
+const destinationSchema = require('../models/destination');
 
 const flightSchema = new Schema({
   airline: {

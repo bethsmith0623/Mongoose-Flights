@@ -44,8 +44,8 @@ Part 2
 
 Part 3
 
-- [] Create a ticketSchema that will be compiled into a Ticket Model with the following properties:
+- [X] Create a ticketSchema that will be compiled into a Ticket Model with the following properties:
 
-- [] Modify the show view for a flight to render, as you see fit (table, grid, etc.), a list of tickets that have been created for that flight.
+- [X] Modify the show view for a flight to render, as you see fit (table, grid, etc.), a list of tickets that have been created for that flight.
 
-- [] Also on the flight's show view, display a New Ticket link (perhaps styled to look like a button) that when clicked, shows the ticket's new view used to create a ticket for the flight. When the form is submitted, create the ticket on the server and redirect back to the flight's show view.
+- [X] Also on the flight's show view, display a New Ticket link (perhaps styled to look like a button) that when clicked, shows the ticket's new view used to create a ticket for the flight. When the form is submitted, create the ticket on the server and redirect back to the flight's show view.
