@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const destinationSchema = new Schema({
-  airportArr: {
+  airport: {
     type: String,
     enum: ['AUS', 'DAL', 'LAX', 'SEA']
   },
@@ -15,7 +15,9 @@ const destinationSchema = new Schema({
         date.setFullYear(updatedYear);
         return date + 1;
       }
-    }, }, { timestamps: true });
+    }, 
+  }, { timestamps: true });
+
 
 const flightSchema = new Schema({
   airline: {
@@ -38,9 +40,10 @@ const flightSchema = new Schema({
       return date;
     }
   },
-  airportDep: {
+  airport: {
     type: String,
-    enum: ['AUS', 'DAL', 'LAX', 'SEA']
+    enum: ['AUS', 'DAL', 'LAX', 'SEA'],
+    default: ['SEA']
   },
   destinations: {
     type: [destinationSchema]
