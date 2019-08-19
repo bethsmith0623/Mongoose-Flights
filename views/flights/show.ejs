@@ -22,6 +22,17 @@
         <p>There are no destinations for this flight</p>
     <% } %>
 
+    <form action="/flights/<%=flight._id%>/destinations" method="POST">
+      <select name="airport">
+        <option value="AUS">AUS</option>
+        <option value="SEA">SEA</option>
+        <option value="LAX">LAX</option>
+        <option value="DAL">DAL</option>
+      </select>
+      <input type="datetime-local" name="arrival">
+      <input type="submit" value="Add Destination">
+    </form>
+
 </body>
 </html>
 
