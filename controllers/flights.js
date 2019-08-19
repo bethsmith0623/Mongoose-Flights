@@ -4,9 +4,13 @@ module.exports = {
   index,
   new: newFlight,
   create,
-  show
+  show, 
+  update
 };
 
+function update (req,res) {
+  
+};
 
 function index(req, res){
   Flight.find({}, function(err, flights){
@@ -31,9 +35,10 @@ function create (req,res){
 };
 
 function show(req,res){
+  //1)Query the database for a single flight
+  //2) We need to call res.render and render a show.ejs template
   Flight.findById(req.params.id)
   .populate('flight').exec(function(err, flight){
-    console.log(flight);
     res.render('flights/show', {title: 'Flight Detail', flight});
   });
 

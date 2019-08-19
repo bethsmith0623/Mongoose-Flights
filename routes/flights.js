@@ -9,5 +9,6 @@ router.get('/', flightCtlr.index);
 router.get('/new', flightCtlr.new);
 router.post('/', flightCtlr.create);
 router.get('/:id', flightCtlr.show);
+router.put('/:id', flightCtlr.update);
 
 module.exports = router;

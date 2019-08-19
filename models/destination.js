@@ -8,14 +8,7 @@ const destinationSchema = new Schema({
     enum: ['AUS', 'DAL', 'LAX', 'SEA']
   },
   arrival: {
-    type: Date, 
-    default: function(){
-        // 08/16/2019 22:20 CDT convert to 08/19/2020 22:20 CDT
-        const date = new Date();
-        const updatedYear = date.getFullYear() + 1;
-        date.setFullYear(updatedYear);
-        return date;
-      }
+    type: Date
     }, 
   }, { timestamps: true });
 

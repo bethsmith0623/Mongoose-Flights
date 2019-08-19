@@ -13,7 +13,14 @@
     <div>Flight No: <%= flight.flightNo %></div>
     <div>Flight Date/Time: <%= flight.departs %></div>
     <div>Departing Airport: <%= flight.airport %></div>
-
+    <% if(flight.destinations.length > 0) { %>
+      <% flight.destinations.forEach(function(d) { %>
+        <p><%= d.airport %></p>
+        <p><%= d.arrival %></p>
+      <% }) %>
+      <% } else { %>
+        <p>There are no destinations for this flight</p>
+    <% } %>
 
 </body>
 </html>
