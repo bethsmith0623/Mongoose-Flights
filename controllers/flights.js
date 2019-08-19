@@ -19,9 +19,12 @@ function newFlight(req,res) {
 }
 
 function create (req,res){
-  var flight = new Flight(req.body);
-  flight.save(function(err){
-   if (err) console.log(err);
+  //Corrects an empty date if one is not entered
+  for(let key in req.body){
+    req.body[key]=== '' && delete req.body[key];
+  }
+  //creates new flight
+  Flight.create(req.body, function(err, flight){
     console.log(flight);
     res.redirect('/flights');
   })

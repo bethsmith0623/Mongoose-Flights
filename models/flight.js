@@ -25,11 +25,11 @@ const flightSchema = new Schema({
   airport: {
     type: String,
     enum: ['AUS', 'DAL', 'LAX', 'SEA'],
-    default: ['SEA']
+    // default: ['SEA']
   },
-  destinations: {
-    type: [destinationSchema]
-  },
+  // destinations: {
+  //   type: [destinationSchema]
+  // },
 }, { timestamps: true });
 
 module.exports = mongoose.model('Flight', flightSchema);
