@@ -8,8 +8,9 @@
     <tr>
       <th>Airline</th>
       <th>Flight No.</th>
+      <th>Departure Airport</th>
       <th>Departure Date/Time</th>
-      <th>Destination</th>
+      <th>Arriving Airport</th>
     </tr>
   </thead>
   <tbody>
@@ -17,11 +18,12 @@
       <tr>
         <td><%= flight.airline %></td>
         <td><%= flight.flightNo %></td>
+        <td><%= flight.airportDep %></td>    
         <td><%= flight.departs %></td>
-        <td></td>
+        <td><%= flight.airportArr %></td>    
+        <td><a href="/flights/<%= flights._id %>">Details</a></td>
       </tr>
       <% }) %>
-        <a href="/flights/<%= flights._id %>">Details</a>
     </tbody>
   </table>
 </body>
